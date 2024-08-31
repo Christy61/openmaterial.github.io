@@ -8,13 +8,14 @@
     <style>
         html,
         body {
+            margin-top: 10px;
             font-family: Arial, sans-serif;
             overflow: visible;
         }
 
         .section {
             width: 100%;
-            height: fit-content;
+            height: auto;
             overflow: visible;
         }
 
@@ -55,13 +56,39 @@
             margin: 10px auto;
             justify-content: center;
             text-align: left;
+            line-height: 1.5;
+        }
+
+        pre {
+            width: 85%;
+            color: #555;
+            margin: 8px auto;
+            padding: 8px 10px;
+            background: #eee;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: auto;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        code {
+            margin: 0, auto;
+            font-family: inherit;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        pre:first-child {
+            margin: 10px auto;
         }
     </style>
 </head>
 
 <body>
     <section class="section">
-        <p class="section-title">Download main dataset</p>
+        <p class="section-title">Overview</p>
         <p>
             Our dataset contains 1001 object centered scenes. To eliminate scale bias, we standardize object sizes
             within a unit sphere. This lets us sample camera
@@ -70,22 +97,78 @@
             All high-resolution images (1600x1200 pixels), rendered using Mitsuba, along with
             associated data including camera positions, depth, 3D object models, and object masks, are stored in the
             standard Blender format, with support for conversion to the COLMAP format, facilitating usability across the
-            research community. You can directly download main dataset <a
-                href="https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/" target="_blank">here</a>. Furthermore,
-            we strongly recommend that you use <a
+            research community.
+        </p>
+        <p class="section-title">Download main dataset</p>
+        <p>
+            You can directly download main dataset <a href="https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/"
+                target="_blank">here</a>.
+
+            if you download directly without our script, please run:
+        <pre>tar -xvf {tar_path} -C {LOCAL_DIR}</pre>
+        </p>
+        <p>
+            Because the dataset is split across multiple files for storage, we strongly recommend that you use <a
                 href="https://github.com/Christy61/OpenMaterial/blob/master/download.py" target="_blank">our
                 script</a> to download different parts of the dataset.(Please refer to the file <a
                 href="https://github.com/Christy61/OpenMaterial/blob/master/README.md" target="_blank">README.md</a> for
             more information.)
         </p>
+        <p>
+            The dataset is classified and named by material type. We use hugginface to store the dataset.
+            Before using our script, you need to log in to your Huggingface account and get your access token on the
+            "Settings" page. Then, if you need the complete dataset, you can run the following command:
+        <pre>python download.py --token <your-token> --type all</pre>
+        </p>
+        <p>
+            Or if you need to download a subset of a certain material type separately, such as "conductor", you can run
+            the following command:
+        <pre>python download.py --token <your-token> --type conductor</pre>
+        </p>
+        <p>
+            After download our dataset correctly, the following file structure will be obtained:
+        <pre>
+            datasets
+            ├── groundtruth
+            │   ├── 5c4ae9c4a3cb47a4b6273eb2839a7b8c
+            │   │   └── clean_5c4ae9c4a3cb47a4b6273eb2839a7b8c.ply
+            │   ├── 5c0514eae1f94f22bc5475fe0970cd28
+            │   │   └── clean_5c0514eae1f94f22bc5475fe0970cd28.ply
+            │   └── ... 
+            ├── openmaterial
+            │   ├── 5c4ae9c4a3cb47a4b6273eb2839a7b8c
+            │   │   ├── train
+            │   │   │   ├── images
+            │   │   │   ├── mask
+            │   │   ├── test
+            │   │   ├── transforms_train.json
+            │   │   └── transforms_test.json
+            │   ├── 5c0514eae1f94f22bc5475fe0970cd28
+            │   └── ... 
+        </pre>
+        </p>
         <p class="section-title">Optional depth data</p>
         <p>
             Researchers may need to use depth maps for supervision or evaluation. We provide high-precision depth
-            metadata instead of depth maps as optional downloadable items. You can download them on <a
+            metadata instead of depth maps as optional downloadable items.
+            The depth data is named "depth-xxxxxx.tar". You can directly download them on <a
                 href="https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/" target="_blank">huggingface</a>.
             Also, you can use <a href="https://github.com/Christy61/OpenMaterial/blob/master/download.py"
                 target="_blank">our
                 script</a> with the depth parameter.
+        </p>
+        <p>
+            Or if you need to download depth data, please run following command:
+        <pre>python download.py --token <your-token> --type all --depth</pre>
+        </p>
+        <p class="section-title">Use depth data</p>
+        <p>
+            an example for using depth data (Here are the real depth values, not normalised):
+        <pre><code>
+            with h5py.File(filename, 'r') as hdf:
+                dataset = hdf['depth']
+                depth = dataset[:] # size: (1200, 1600)
+        </code></pre>
         </p>
     </section>
 </body>
