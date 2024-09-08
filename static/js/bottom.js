@@ -1,5 +1,5 @@
 function showContent(section) {
-    const sections = ['Home', 'Preview', 'Download', 'Benchmark-Board', 'Visualization'];
+    const sections = ['Home', 'Preview', 'Download', 'Evaluation', 'Benchmark-Board', 'Visualization'];
     sections.forEach(sec => {
         document.getElementById(`content-${sec}`).classList.remove('visible');
         document.querySelector(`.button-card[onclick="showContent('${sec}')"]`).classList.remove('active');

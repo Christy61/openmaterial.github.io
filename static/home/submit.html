@@ -64,7 +64,7 @@
 
 <body>
     <section class="section">
-        <p class="section-title">Introduction</p>
+        <p class="section-title">Sign In</p>
         <p>
             Accurately reconstructing objects with complex optical properties, such as metals and glass, remains a
             formidable challenge due to their unique specular and light-transmission characteristics. To facilitate
@@ -74,19 +74,6 @@
             variants—
             and captured under 723 diverse lighting conditions.
         </p>
-        <p class="section-title">Overview</p>
-        <p>
-            Our dataset contains 1001 object centered scenes. To eliminate scale bias, we standardize object sizes
-            within a unit sphere. This lets us sample camera
-            positions using a Fibonacci grid on the upper hemisphere, ensuring uniform distribution and non-overlapping
-            coverage. We then splits these camera positions into distinct training (50) and testing (40) viewpoints.
-            All high-resolution images (1600x1200 pixels), rendered using Mitsuba, along with
-            associated data including <b>camera positions</b>, <b>depth</b>, <b>3D object models</b>, and <b>object
-                masks</b>, are stored in the
-            standard Blender format, with support for conversion to the COLMAP format, facilitating usability across the
-            research community.
-        </p>
-        <img src="../images/teaser.png" style="width:60%; margin-left:auto; margin-right:auto; display:block">
     </section>
 </body>
 
