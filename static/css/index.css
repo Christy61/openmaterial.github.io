@@ -19,6 +19,7 @@ hr {
 .author-info {
   text-align: center;
   margin-bottom: 11px;
+  color: black
 }
 
 .button-container {
@@ -113,4 +114,8 @@ hr {
   margin: auto;
   margin-bottom: 0px;
   background: #fff;
+}
+
+.is-size-author {
+  font-size: 1.18rem !important
 }
