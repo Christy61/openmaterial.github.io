@@ -7665,7 +7665,8 @@ label.panel-block:hover {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: .75rem
+    padding-top: .75rem;
+    padding-bottom: 0;
 }
 
 .columns.is-mobile>.column.is-narrow {

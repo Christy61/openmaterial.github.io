@@ -40,6 +40,20 @@
             line-height: 1.5;
         }
 
+        pre {
+            width: 85%;
+            color: #555;
+            margin: 8px auto;
+            padding: 8px 10px;
+            background: #eee;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: auto;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
         a:visited {
             color: #1154a0;
         }
@@ -74,6 +88,8 @@
             variants—
             and captured under 723 diverse lighting conditions.
         </p>
+        <img src="../images/teaser.png"
+            style="width:60%; margin-left:auto; margin-right:auto; margin-top:20px; margin-bottom:5px; display:block">
         <p class="section-title">Overview</p>
         <p>
             Our dataset contains 1001 object centered scenes. To eliminate scale bias, we standardize object sizes
@@ -86,7 +102,50 @@
             standard Blender format, with support for conversion to the COLMAP format, facilitating usability across the
             research community.
         </p>
-        <img src="../images/teaser.png" style="width:60%; margin-left:auto; margin-right:auto; display:block">
+        <p class="section-title">Data structure</p>
+        <p>
+            The data structure of each subset is as follows:
+        <pre>
+            ├── name_of_object/[lighing_condition_name]-[material_type]-[material_name]
+            │   ├── train
+            │   │   ├── images
+            │   │   │   ├── 000000.png
+            │   │   │   |-- ...
+            │   │   └── mask
+            │   │   │   ├── 000000.png
+            │   │   │   |-- ...
+            │   │   └── depth
+            │   │       ├── 000000.png
+            │   │       |-- ...
+            │   ├── test
+            │   │   ├── images
+            │   │   │   ├── 000000.png
+            │   │   │   |-- ...
+            │   │   └── mask
+            │   │   │   ├── 000000.png
+            │   │   │   |-- ...
+            │   │   └── depth
+            │   │       ├── 000000.png
+            │   │       |-- ...
+            │   └── transformas_train.json
+            │   └── transformas_test.json
+        </pre>
+        </p>
+        <p class="section-title">Citation</p>
+        <p>
+            If you find our work useful in your research, please cite:
+        <pre>
+        @article{Dang24,
+            title={OpenMaterial: A Comprehensive Dataset of Complex Materials for 3D Reconstruction},
+            author={Zheng Dang and Jialu Huang and Fei Wang and Mathieu Salzmann},
+            journal={arXiv preprint arXiv:2406.08894},
+            year={2024}
+        }</pre>
+        </p>
+        <p class="section-title">Contact</p>
+        <p>
+            <a href="mailto:zheng.dang@epfl.ch">zheng.dang@epfl.ch</a>
+        </p>
     </section>
 </body>
 
