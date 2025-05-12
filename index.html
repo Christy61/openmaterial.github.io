@@ -9,7 +9,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>OpenMaterial: A Comprehensive Dataset of Complex Materials for 3D Reconstruction</title>
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Dataset",
+    "name": "OpenMaterial",
+    "description": "OpenMaterial: A comprehensive of complex materials for 3D reconstruction, containing images, masks and depth maps across 1001 shapes, 295 materials and 723 lighting conditions.",
+    "url": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial",
+    "sameAs": "https://arxiv.org/abs/2406.08894",
+    "identifier": [
+      "arxiv:2406.08894"
+    ],
+    "datePublished": "2024-06-06",
+    "version": "1.0.0",
+    "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "creator": {
+      "@type": "Organization",
+      "name": "EPFL-CVLab",
+      "url": "https://huggingface.co/EPFL-CVLab"
+    },
+    "includedInDataCatalog": {
+      "@type": "DataCatalog",
+      "name": "Hugging Face Datasets",
+      "url": "https://huggingface.co/datasets"
+    },
+    "keywords": [
+      "3D reconstruction",
+      "material rendering",
+      "image masks",
+      "depth maps",
+      "Croissant",
+      "CC-BY-NC-4.0"
+    ],
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "name": "diffuse split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/diffuse-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "conductor split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/conductor-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "plastic split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/plastic-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "dielectric split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/dielectric-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "roughconductor split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/roughconductor-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "roughplastic split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/roughplastic-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "roughdielectric split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/roughdielectric-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "depth split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/depth-*.tar"
+      },
+      {
+        "@type": "DataDownload",
+        "name": "ablation split",
+        "encodingFormat": "application/x-tar",
+        "contentUrl": "https://huggingface.co/datasets/EPFL-CVLab/OpenMaterial/resolve/main/ablation-*.tar"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
