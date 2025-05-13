@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrics Comparison of SOTA Methods</title>
+    <style>
+        .container-n {
+            width: 90%;
+            margin: 0 auto;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0px;
+        }
+
+        .column_left {
+            flex: 0 0 47.38%;
+        }
+
+        .column_right {
+            flex: 0 0 52.12%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .sub-caption {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -5px;
+            margin-bottom: 6px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 19px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-n">
+        <img src="table/comp_table_nerf.png"
+            style="width:60%; margin-left:auto; margin-right:auto; margin-top:20px; margin-bottom:5px; display:block">
+    </div>
+    <div class="caption">
+        Table 1. <strong>Comparison of SOTA Novel View Synthesis Methods.</strong> A ⋆ denotes specialized methods.
+    </div>
+
+    <div class="container-n">
+        <img src="table/comp_table_neus.png"
+            style="width:60%; margin-left:auto; margin-right:auto; margin-top:20px; margin-bottom:5px; display:block">
+    </div>
+    <div class="caption">
+        Table 2. <strong>Comparison of SOTA 3D Reconstruction Methods.</strong> We report the Chamfer distance ×10<sup>−2</sup>. A ⋆ denotes specialized methods
+    </div>
+
+    <div class="container-n">
+        <img src="table/comp_table_ablation.png"
+            style="width:60%; margin-left:auto; margin-right:auto; margin-top:20px; margin-bottom:5px; display:block">
+    </div>
+    <div class="caption">
+        Table 3. <strong>Ablation of Material Properties.</strong>
+    </div>
+
+</body>
+
+</html>
