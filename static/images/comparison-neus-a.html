@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qualitative Result on Novel View Synthesis Task</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: auto repeat(4, 1fr);
+      gap: 8px;
+      align-items: center;
+      width: 100%;
+    }
+    .header-cell {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 4px 0;
+    }
+    .row-label {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 4px;
+    }
+    .grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ccc;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 1em;
+      font-size: 1.2rem;
+    }
+    .caption {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section-title">Qualitative Results on Novel View Synthesis</div>
+
+  <div class="grid">
+
+    <div></div>
+    <div class="header-cell">Conductor</div>
+    <div class="header-cell">Dielectric</div>
+    <div class="header-cell">Plastic</div>
+    <div class="header-cell">Diffuse</div>
+
+    <div class="row-label">RGB Image</div>
+    <img src="vis-neus-c/gt_df894b66e2e54b558a43497becb94ff0-conductor.png" alt="2D GT Conductor">
+    <img src="vis-neus-c/gt_a2210a0ba6834141af3bf83ee1e03f07-dielectric.png" alt="2D GT Dielectric">
+    <img src="vis-neus-c/gt_ff7e50857e0140f99f1885f3d2c9e4d3-plastic.png" alt="2D GT Plastic">
+    <img src="vis-neus-c/gt_7f350ea007a8462abe573f870a432679-diffuse.png" alt="2D GT Diffuse">
+
+    <div class="row-label">Ground Truth</div>
+    <img src="vis-neus-c/gt_df894b66e2e54b558a43497becb94ff0_11.png" alt="GT Conductor">
+    <img src="vis-neus-c/gt_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="GT Dielectric">
+    <img src="vis-neus-c/gt_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="GT Plastic">
+    <img src="vis-neus-c/gt_7f350ea007a8462abe573f870a432679_10.png" alt="GT Diffuse">
+
+    <div class="row-label">PGSR</div>
+    <img src="vis-neus-c/PGSR_df894b66e2e54b558a43497becb94ff0_11.png" alt="PGSR Conductor">
+    <img src="vis-neus-c/PGSR_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="PGSR Dielectric">
+    <img src="vis-neus-c/PGSR_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="PGSR Plastic">
+    <img src="vis-neus-c/PGSR_7f350ea007a8462abe573f870a432679_10.png" alt="PGSR Diffuse">
+
+    <div class="row-label">2DGS</div>
+    <img src="vis-neus-c/2dgs_df894b66e2e54b558a43497becb94ff0_11.png" alt="2DGS Conductor">
+    <img src="vis-neus-c/2dgs_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="2DGS Dielectric">
+    <img src="vis-neus-c/2dgs_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="2DGS Plastic">
+    <img src="vis-neus-c/2dgs_7f350ea007a8462abe573f870a432679_10.png" alt="2DGS Diffuse">
+
+    <div class="row-label">NeRRF</div>
+    <img src="vis-neus-c/nerrf_df894b66e2e54b558a43497becb94ff0_11.png" alt="NeRRF Conductor">
+    <img src="vis-neus-c/nerrf_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="NeRRF Dielectric">
+    <img src="vis-neus-c/nerrf_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="NeRRF Plastic">
+    <img src="vis-neus-c/nerrf_7f350ea007a8462abe573f870a432679_10.png" alt="NeRRF Diffuse">
+
+    <div class="row-label">NeRO</div>
+    <img src="vis-neus-c/NeRO_df894b66e2e54b558a43497becb94ff0_11.png" alt="NeRO Conductor">
+    <img src="vis-neus-c/NeRO_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="NeRO Dielectric">
+    <img src="vis-neus-c/NeRO_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="NeRO Plastic">
+    <img src="vis-neus-c/NeRO_7f350ea007a8462abe573f870a432679_10.png" alt="NeRO Diffuse">
+
+    <div class="row-label">Instant-NGP</div>
+    <img src="vis-neus-c/instant-nsr-pl-wmask_df894b66e2e54b558a43497becb94ff0_11.png" alt="Instant-NGP Conductor">
+    <img src="vis-neus-c/instant-nsr-pl-wmask_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="Instant-NGP Dielectric">
+    <img src="vis-neus-c/instant-nsr-pl-wmask_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="Instant-NGP Plastic">
+    <img src="vis-neus-c/instant-nsr-pl-wmask_7f350ea007a8462abe573f870a432679_10.png" alt="Instant-NGP Diffuse">
+
+    <div class="row-label">NeuS2</div>
+    <img src="vis-neus-c/neus2_df894b66e2e54b558a43497becb94ff0_11.png" alt="NeuS2 Conductor">
+    <img src="vis-neus-c/neus2_a2210a0ba6834141af3bf83ee1e03f07_3.png" alt="NeuS2 Dielectric">
+    <img src="vis-neus-c/neus2_ff7e50857e0140f99f1885f3d2c9e4d3_3.png" alt="NeuS2 Plastic">
+    <img src="vis-neus-c/neus2_7f350ea007a8462abe573f870a432679_10.png" alt="NeuS2 Diffuse">
+  </div>
+
+  <div class="caption">
+    <strong>Figure.</strong> Additional qualitative 3D reconstruction results on OpenMaterial.
+  </div>
+
+</body>
+</html>
