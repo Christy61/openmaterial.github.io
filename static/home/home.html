@@ -102,6 +102,63 @@
             standard Blender format, with support for conversion to the COLMAP format, facilitating usability across the
             research community.
         </p>
+        <p class="section-title">📌 Update log</p>
+
+        <p class="section-title">🗓️ March 2025</p>
+        <ul class="update-log">
+            <li>Updated <b>denoise scripts</b> to identify and address rare missing cases caused by server-side cluster fluctuations.</li>
+            <li>Refined benchmark results for selected algorithms (<i>NeRO</i>, <i>GES</i>, <i>GaussianShader</i>) on the <b>Ablation Dataset</b>.</li>
+            <li>⚠️ Note: Main benchmark results remain <b>unaffected</b>.</li>
+            <li>🔗 Updated results available at: <a href="https://christy61.github.io/openmaterial.github.io/" target="_blank">https://christy61.github.io/openmaterial.github.io/</a></li>
+        </ul>
+
+        <p class="section-title">🗓️ November 2024</p>
+        <ul class="update-log">
+            <li>Released <b>benchmark results</b> on the <b>Ablation Dataset</b>, with strict control over <b>shape</b>, <b>material</b>, and <b>lighting</b> variables.</li>
+            <li>Benchmarked a set of representative algorithms across two tasks:
+                <ul>
+                    <li><i>Novel View Synthesis</i>: Gaussian Splatting, Instant-NGP, 2DGS, PGSR, GES, GSDR, GaussianShader</li>
+                    <li><i>3D Reconstruction</i>: Instant-NeuS, NeuS2, 2DGS, PGSR, NeRO</li>
+                </ul>
+            </li>
+            <li>Updated evaluation scripts to <b>incorporate new algorithms</b> and support the <b>Ablation Dataset benchmarking format</b>.</li>
+            <li>Improved <b>evaluation code</b> to better visualize benchmarking comparisons.</li>
+            <li>🔗 Full results available at: <a href="https://christy61.github.io/openmaterial.github.io/" target="_blank">https://christy61.github.io/openmaterial.github.io/</a></li>
+        </ul>
+
+        <p class="section-title">🗓️ October 2024</p>
+        <ul class="update-log">
+            <li>Released extended <b>benchmark results</b> on the <b>Main Dataset</b>:
+                <ul>
+                    <li><i>7 Novel View Synthesis methods</i>: Gaussian Splatting, Instant-NGP, 2DGS, PGSR, GES, GSDR, GaussianShader</li>
+                    <li><i>6 3D Reconstruction methods</i>: Instant-NeuS, NeuS2, 2DGS, PGSR, NeRO, NeRRF</li>
+                </ul>
+            </li>
+            <li>Highlighted algorithms specialized for <b>challenging materials</b>: NeRO, NeRRF, GSDR, GaussianShader.</li>
+            <li>Updated evaluation scripts to <b>incorporate new algorithms</b>.</li>
+        </ul>
+
+        <p class="section-title">🗓️ September 2024</p>
+        <ul class="update-log">
+            <li>Introduced a new <b>Ablation Dataset</b> for controlled analysis of 3D reconstruction and view synthesis.</li>
+            <li>Controlled variables:
+                <ul>
+                    <li><b>Objects</b>: Vase, Snail, Boat, Motor Bike, Statue</li>
+                    <li><b>Lighting</b>: Indoor, Daytime Garden, Nighttime Street</li>
+                    <li><b>Materials</b>: Conductor, Dielectric Plastic, Rough Conductor, Rough Dielectric, Rough Plastic, Diffuse</li>
+                </ul>
+            </li>
+            <li>Total: <b>105 unique scenes</b> (5 × 3 × 7).</li>
+            <li>🔗 Data is now available.</li>
+        </ul>
+
+        <p class="section-title">🗓️ July 2024</p>
+        <ul class="update-log">
+            <li>Dataset restructured for <b>flexible material-type-based downloading</b>.</li>
+            <li>Users can now download subsets of data focusing on specific material categories (e.g., <i>diffuse</i>, <i>conductor</i>, <i>dielectric</i>, <i>plastic</i>).</li>
+            <li>📦 Updated <b>download scripts</b> included.</li>
+        </ul>
+
         <p class="section-title">Data structure</p>
         <p>
             The data structure of each subset is as follows:
